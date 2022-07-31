@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { response, ResponseData } from './response-data';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  response: ResponseData = response;
 }

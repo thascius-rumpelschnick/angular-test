@@ -1,0 +1,6 @@
+<section class="states">
+    <a *ngFor="let state of getSortedStates()" [href]="state.url">
+        <h2>{{ state.name }}</h2>
+        <p>{{ getSchoolsWording(state.schoolCount) }}</p>
+    </a>
+</section>

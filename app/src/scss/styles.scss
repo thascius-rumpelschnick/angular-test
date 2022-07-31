@@ -1,0 +1,54 @@
+@import 'colors';
+@import 'variables';
+
+// Main styles
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: $font-size;
+    font-family: $font-family;
+    background: $main-background-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Layouts
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    margin: auto;
+    padding: 5px;
+
+    width: 100%;
+
+    @media screen and (min-width: $min-large-width) {
+        max-width: $max-width;
+    }
+}
+
+section {
+    margin: 10px 0;
+}
+
+// Headings
+
+h1 {
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+}
+
+// Lists
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
