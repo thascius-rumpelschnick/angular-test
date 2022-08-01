@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo
-echo "-----------------------------------"
-echo "-- Node Angular CLI Shell Helper --"
-echo "-----------------------------------"
+echo "---------------------------------"
+echo "| Node Angular CLI Shell Helper |"
+echo "---------------------------------"
 echo
 
 echo "Chose option:"
-echo "-----------------------------"
+echo "---------------------------------"
 echo "[1] - Build image"
 echo "[2] - Install dependencies"
 echo "[3] - Serve app"
@@ -48,5 +48,5 @@ if [ "$option" == "1" ]
         exit 1
 fi
 
-echo "Done for the day!"
+echo "Done for the day..."
 exit 0
