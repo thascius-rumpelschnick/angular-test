@@ -1,10 +1,4 @@
-FROM node:lts-bullseye
-
-RUN apt-get update && apt-get install -y \
-  python3 \
-  g++ \
-  make \
-  && rm -rf /var/lib/apt/lists/*
+FROM node:lts-alpine
 
 WORKDIR /app
 

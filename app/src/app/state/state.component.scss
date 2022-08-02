@@ -1,0 +1,20 @@
+@import './../../scss/variables';
+
+div#state {
+    color: $font-color;
+    background-color: $main-background-color;
+    border: 10px solid $background-color;
+    padding: 10px;
+
+    & + a {
+        display: inline-block;
+        padding: 5px;
+        background-color: $background-color;
+        margin-top: 10px;
+
+        &:hover {
+            background-color: rgba($color: $background-color, $alpha: .75);
+            @include box-shadow;
+        }
+    }
+}
