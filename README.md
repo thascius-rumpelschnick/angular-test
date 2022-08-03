@@ -26,6 +26,8 @@
 
 8. To stop the application open a second terminal, run shell script (see step 4) and choose **option 5**
 
+9. Open your browser and go to <http://localhost:4200>
+
 ---
 
 ## Source Code
