@@ -1,10 +1,14 @@
-FROM node:lts-bullseye
+FROM node:lts-bullseye-slim
 
-RUN apt-get update && apt-get install -y \
-  python3 \
-  g++ \
-  make \
-  && rm -rf /var/lib/apt/lists/*
+RUN groupadd -r user \
+    && useradd -r user -g user --shell /bin/bash
+
+RUN set -ex \
+    && apt-get update \
+    && apt-get install --no-install-recommends -y chromium \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV CHROME_BIN=/usr/bin/chromium
 
 WORKDIR /app
 

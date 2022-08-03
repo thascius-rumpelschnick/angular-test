@@ -1,0 +1,20 @@
+@import './../../../scss/variables';
+
+ul#persons {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+
+  li {
+    color: $font-color;
+    background-color: $background-color;
+    font-weight: bold;
+
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+
+    width: 30px;
+    height: 30px;
+  }
+}

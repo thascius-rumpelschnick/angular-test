@@ -1,0 +1,8 @@
+<section>
+    <div id="state">
+        <h2 *ngIf="state">{{ state.name }}</h2>
+        <p *ngIf="state">Anzahl Schulen: {{ state.schoolCount }}</p>
+        <p *ngIf="state && state.stadtStaat">{{ state.name }} ist ein Stadtstaat</p>
+    </div>
+    <a routerLink="">zurück</a>
+</section>

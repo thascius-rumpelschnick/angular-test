@@ -1,27 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { State } from '../response-data';
+import { Component } from '@angular/core';
+import { ResponseService } from '../response.service';
 
 @Component({
-  selector: 'app-states',
-  templateUrl: './states.component.html',
-  styleUrls: ['./states.component.scss']
+  selector: 'app-home',
+  template: `
+    <app-states [states]="responseService.getStateList()"></app-states>
+    <app-persons [persons]="responseService.getPersonIndexCounts()"></app-persons>
+  `,
+  providers: [ResponseService]
 })
-export class StatesComponent implements OnInit {
-  @Input() states: State[] = [];
-
-  getSortedStates(): State[] {
-    return this.states.sort(
-      (a: State, b: State) => a.name.localeCompare(b.name, 'de')
-    );
-  }
-
-  getSchoolsWording(count: number): string {
-    return count === 1
-      ? `${count} Schule`
-      : `${count} Schulen`;
-  }
-
-  ngOnInit(): void {
-    console.log('StatesComponent init.');
-  }
+export class StatesComponent {
+  constructor(readonly responseService: ResponseService) { }
 }
