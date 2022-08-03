@@ -12,11 +12,13 @@ $font-family: arial, sans-serif;
 $main-background-color: $white;
 $background-color: $light-grey;
 
-@mixin box-shadow {
-    box-shadow: 1px 2px 5px $dark-grey;
-}
-
 $min-medium-width: 500px + 1px;
 $min-large-width: 800px + 1px;
 
 $max-width: 1024px;
+
+// Mixins
+
+@mixin box-shadow {
+    box-shadow: 1px 2px 5px $dark-grey;
+}

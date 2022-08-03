@@ -11,9 +11,9 @@ import { AppRoutingModule } from './app-routing.module'
 @NgModule({
   declarations: [
     AppComponent,
-    StatesComponent,
     StateComponent,
     StateListComponent,
+    StatesComponent,
     PersonsComponent
   ],
   imports: [

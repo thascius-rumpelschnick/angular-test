@@ -8,6 +8,7 @@ ul#persons {
     li {
         color: $font-color;
         background-color: $background-color;
+        font-weight: bold;
 
         line-height: 30px;
         text-transform: uppercase;

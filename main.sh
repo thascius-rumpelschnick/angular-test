@@ -25,7 +25,7 @@ if [ "$option" == "1" ]
      elif [ "$option" == "2" ]
         then
             echo "Installing dependencies..."
-            docker run --rm --name angular -v ${PWD}/app:/app angular:v1 npm install
+            docker run --rm --name angular -u root -v ${PWD}/app:/app angular:v1 npm install
     elif [ "$option" == "3" ]
         then
             echo "Serving app..."
@@ -42,11 +42,12 @@ if [ "$option" == "1" ]
     elif [ "$option" == "6" ]
         then
             echo "Starting and attaching to container..."
-            docker run -it --rm --name angular -v ${PWD}/app:/app -p 4200:4200 angular:v1 bash
+            docker run -it --rm --name angular -u root -v ${PWD}/app:/app -p 4200:4200 angular:v1 bash
     else
         echo "ERROR: Unknown option: ${option}"
         exit 1
 fi
 
+echo
 echo "Done for the day..."
 exit 0

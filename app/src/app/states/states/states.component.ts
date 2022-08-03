@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { State } from '../../response-data';
 
 @Component({
@@ -6,7 +6,7 @@ import { State } from '../../response-data';
   templateUrl: './states.component.html',
   styleUrls: ['./states.component.scss']
 })
-export class StatesComponent implements OnInit {
+export class StatesComponent {
   @Input() states: State[] = [];
 
   getSortedStates(): State[] {
@@ -19,9 +19,5 @@ export class StatesComponent implements OnInit {
     return count === 1
       ? `${count} Schule`
       : `${count} Schulen`;
-  }
-
-  ngOnInit(): void {
-    console.log('StatesComponent init.');
   }
 }
