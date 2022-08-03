@@ -10,9 +10,9 @@ describe('StateComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [ StateComponent ]
+      declarations: [StateComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(StateComponent);
     component = fixture.componentInstance;
