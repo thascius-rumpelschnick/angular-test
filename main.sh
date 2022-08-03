@@ -6,7 +6,7 @@ echo "| Node Angular CLI Shell Helper |"
 echo "---------------------------------"
 echo
 
-echo "Chose option:"
+echo "Choose option:"
 echo "---------------------------------"
 echo "[1] - Build image"
 echo "[2] - Install dependencies"
